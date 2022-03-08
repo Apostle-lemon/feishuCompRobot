@@ -36,8 +36,8 @@ self.sTime[1]     # sign up time (end)
 self.cTime[0]     # competing time (begin)
 self.cTime[1]     # competing time (end)
 self.status       # competition status
-self.source       # web source
-self.bsobj        # web bs4 obj
+self.source       # page source
+self.bsobj        # page bs4 obj
 self.details      # competition details and contract information
 ```
 
