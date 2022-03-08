@@ -11,6 +11,13 @@
 - [ ] 【摩课云】   ：   `null`
 - [ ] 【赛氪】   ：   `null`
 
+## 必要环境
+
+- python
+- python/requests
+- python/Python-bs4
+
+
 ## 说明
 
 ### 【会查查】使用说明
