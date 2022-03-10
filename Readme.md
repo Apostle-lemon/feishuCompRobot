@@ -7,7 +7,7 @@
 ## 索引
 
 - [x] 【会查查】   ：   `_huixx.cn_.py`
-- [ ] 【我爱竞赛网】   ：   `null`
+- [x] 【我爱竞赛网】   ：   `_52jingsai.com_`
 - [ ] 【摩课云】   ：   `null`
 - [ ] 【赛氪】   ：   `null`
 
@@ -27,7 +27,6 @@
 3. 爬得的信息会存在 `cList` 中，元素类型为 `CInfo`
   - 对应关系如下：
 
-
 ```python
 self.url          # info msg url
 self.name         # competition name
@@ -41,4 +40,19 @@ self.bsobj        # page bs4 obj
 self.details      # competition details and contract information
 ```
 
+### 【我爱竞赛网】使用说明
 
+
+1. 控制 `pageMax[i]` 的值来改变爬取网站列表页数的最大值
+  - 0 ~ 2 分别对应正在报名、准备报名、报名结束
+2. 爬得的信息会存在 `cList` 中，元素类型为 `CInfo`
+  - 对应关系如下：
+
+```python
+self.url            # info msg url
+self.status         # competition status, 0 ~ 1 分别对应正在报名、准备报名、报名结束
+self.source         # page source
+self.bsobj          # page bs4 obj
+self.summary        # competition summary
+self.details        # competition details
+```

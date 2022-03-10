@@ -4,6 +4,9 @@ import json
 import requests
 from bs4 import BeautifulSoup
 
+cList = []
+target_url = "https://www.huixx.cn/sai/match/index/profession/1/province/0/foreign/0/process/0/obj/0"
+
 pageMax = 2; # 爬几页
 
 head = {
@@ -47,10 +50,8 @@ def main() :
         body.append({ 'profession_arr[]': '1', 'page': str(i+1) })
 
     
-    # 创业营商 + 慧查查
-    target_url = "https://www.huixx.cn/sai/match/index/profession/1/province/0/foreign/0/process/0/obj/0"
     resp = s.get(target_url,headers = head)
-    cList = []
+    
     for i in range(pageMax) :
         resp = s.post(target_url,headers = head,data = body[i])
         jsonStr = json.loads(resp.text[71:]).get('data').get('list')
