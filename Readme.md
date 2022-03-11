@@ -8,8 +8,8 @@
 
 - [x] 【会查查】   ：   `_huixx.cn_.py`
 - [x] 【我爱竞赛网】   ：   `_52jingsai.com_`
-- [ ] 【摩课云】   ：   `null`
-- [ ] 【赛氪】   ：   `null`
+- [x] 【摩课云】   ：   `_moocllege_.py`
+- [x] 【赛氪】   ：   `_saikr.py`
 
 ## 必要环境
 
@@ -56,3 +56,31 @@ self.bsobj          # page bs4 obj
 self.summary        # competition summary
 self.details        # competition details
 ```
+
+### 【塞氪】使用说明
+
+1. 控制 `pageMax` 的值来改变爬取网站列表页数
+2. 各竞赛详细内容以html形式保存，保存路径见输出
+3. 简要信息会存在 `cList` 中，元素类型为 `CInfo`
+  - 对应关系如下：
+```python
+self.url            # info msg url
+self.status         # competition status
+self.sTime          # sign up time
+self.cTime          # competition time
+self.name           # name
+```
+
+### 【摩课云】使用说明
+
+1. 信息存在 `cList` 中，元素类型为 `CInfo`
+
+  - 对应关系如下：
+```python
+self.url            # info msg url
+self.sTime          # competiotion start time
+self.eTime          # competition end time
+self.name           # name
+```
+
+
