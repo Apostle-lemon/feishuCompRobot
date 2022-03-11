@@ -58,6 +58,8 @@ def main():
         startTime = data.get("startTime")[0:10]
         endTime = data.get("endTime")[0:10]
         url = data.get("url")
+        if url == None :
+            url = "https://cc.moocollege.com/#/details?" + str(data.get("id"))
         newCompetition = CInfo(url, name, startTime, endTime)
         cList.append(newCompetition)
         newCompetition.printMe()
