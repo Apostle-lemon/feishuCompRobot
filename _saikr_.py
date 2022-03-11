@@ -48,7 +48,7 @@ def main():
             try:
                 resp = requests.get(baseurl + str(page + 1), headers=headers, timeout=3)
             except requests.exceptions.ConnectTimeout or requests.exceptions.ProxyError or requests.exceptions.ConnectionError:
-                print("Error, check the proxy first, then contact the software team")
+                print("While enumming pages : Error, check the proxy first, then contact the software team")
             soup = BeautifulSoup(resp.text, "lxml")
             listItem = soup.find_all("li")
             print("\n\ndetail .html in" + path+'\n\n')

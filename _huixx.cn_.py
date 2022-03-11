@@ -22,7 +22,11 @@ class CInfo :
         self.sTime = sTime                                              # sign up time
         self.cTime = cTime                                              # competing time
         self.status = status.strip()                                    # competition status
-        self.source = requests.get(self.url,headers = head).text        # get info msg
+        self.source = ''
+        try:
+            self.source = requests.get(self.url,headers = head).text        # get info msg
+        except requests.exceptions.ConnectTimeout or requests.exceptions.ProxyError:
+            print("Cinfo url" + str(url) + "Error")
         self.bsobj = BeautifulSoup(self.source, features = "lxml")
         self.details = self.bsobj.find_all(is_details)
         pass
@@ -50,10 +54,15 @@ def main() :
         body.append({ 'profession_arr[]': '1', 'page': str(i+1) })
 
     
-    resp = s.get(target_url,headers = head)
-    
+    try:
+        resp = s.get(target_url,headers = head)
+    except requests.exceptions.ConnectTimeout or requests.exceptions.ProxyError or requests.exceptions.ConnectionError :
+        print("Error, check the proxy first, then contact the software team")
     for i in range(pageMax) :
-        resp = s.post(target_url,headers = head,data = body[i])
+        try:
+            resp = s.post(target_url,headers = head,data = body[i])
+        except requests.exceptions.ConnectTimeout or requests.exceptions.ProxyError or requests.exceptions.ConnectionError :
+            print("Error, check the proxy first, then contact the software team")
         jsonStr = json.loads(resp.text[71:]).get('data').get('list')
         for j in range(15) : # 一页有十五项
             url = name = sTime = cTime = status = ""

@@ -15,7 +15,11 @@ class CInfo :
     def __init__(self, url, status) :
         self.url = 'http://www.52jingsai.com/' + url.strip()        # info msg url
         self.status = status.strip()                                # competition status
-        self.source = requests.get(self.url).text                   # get info msg
+        self.source = ''
+        try:
+            self.source = requests.get(self.url).text                   # get info msg
+        except requests.exceptions.ConnectTimeout or requests.exceptions.ProxyError:
+            print("Cinfo url" + str(url) + "Error")
         self.bsobj = BeautifulSoup(self.source, features = 'lxml')
         self.summary = self.bsobj.find(is_summary)
         self.details = []
@@ -45,7 +49,10 @@ def main() :
     for i in range(3) :
         for page in range(pageMax[i]) :
             pageInfo = { 'page': str(page+1) }
-            resp = requests.get(target_url + urlSufix[i], params = pageInfo)
+            try:
+                resp = requests.get(target_url + urlSufix[i], params = pageInfo)
+            except requests.exceptions.ConnectTimeout or requests.exceptions.ProxyError or requests.exceptions.ConnectionError :
+                print("Error, check the proxy first, then contact the software team")
             bsobj = BeautifulSoup(resp.text, features = 'lxml')
             flag = True
             for cmpt in bsobj.find(is_list).find_all(is_cmpt) :
