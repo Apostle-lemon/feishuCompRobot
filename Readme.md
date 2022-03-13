@@ -26,6 +26,8 @@
 
 ### 【会查查】使用说明
 
+爬虫本体在`_huixx.cn_.py`中，如果Cookie失效请修改`get_huixx.cn_cookie.py`中的密码和用户名，并运行。
+
 1. 控制 `pageMax` 的值来改变爬取网站列表页数
 2. `head` 中使用有效登录 `Cookie` 才能确保获取“联系方式”信息
 3. 爬得的信息会存在 `cList` 中，元素类型为 `CInfo`
