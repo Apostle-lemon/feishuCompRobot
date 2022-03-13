@@ -2,6 +2,10 @@
 
 < 脚本说明文档 >
 
+所有网站都会存在一个在 `./tmp` 文件夹下的 `.tmp` 文件，用来记录上一次更新的通知最晚日期，用来判断最新信息
+
+如果需要重新开始爬取，则清空对应的 `.tmp` 文件即可
+
 按照需求文档中的需求，以目标网站为单位分为四个部分
 
 ## 索引
@@ -34,7 +38,6 @@ self.sTime[0]     # sign up time (begin)
 self.sTime[1]     # sign up time (end)
 self.cTime[0]     # competing time (begin)
 self.cTime[1]     # competing time (end)
-self.status       # competition status
 self.source       # page source
 self.bsobj        # page bs4 obj
 self.details      # competition details and contract information

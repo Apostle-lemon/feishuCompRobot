@@ -45,7 +45,28 @@ def is_list(tag) :
 def is_cmpt(tag) :
     return tag.has_attr('class') and tag['class'] == [ 'bbda', 'list_bbda', 'cl' ]
 
+def getLastUpdTime() :
+    f = open('./tmp/_52jingsai.com_.tmp','r')
+    time = f.read()
+    f.close()
+    return time
+
+def updUpdTime(time) :
+    f = open("./tmp/_52jingsai.com_.tmp",'w')
+    f.write(time)
+    f.close()
+    return
+
+def leq(s1,s2) :
+    if len(s1) < len(s2) :
+        return True
+    if len(s1) > len(s2) :
+        return False
+    return s1 < s2 
+
 def main() :
+    lastUpdTime = getLastUpdTime()
+    newUpdTime = lastUpdTime 
     for i in range(3) :
         for page in range(pageMax[i]) :
             pageInfo = { 'page': str(page+1) }
@@ -58,10 +79,18 @@ def main() :
             for cmpt in bsobj.find(is_list).find_all(is_cmpt) :
                 flag = False
                 link = cmpt.find('a').get('href')
+                if leq(link, lastUpdTime) :
+                    continue
+                if leq(newUpdTime, link) :
+                    newUpdTime = link
                 newCmpt = CInfo(link, cmptStatus[i])
                 cList.append(newCmpt)
                 newCmpt.printMe()
             if flag :
                 break
+
+    updUpdTime(newUpdTime)
+
+
 if __name__ == "__main__" :
     main()
