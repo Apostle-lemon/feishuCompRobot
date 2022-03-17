@@ -24,6 +24,7 @@ if cookies == oldCookies :
 else :
     f = open("./tmp/_huixx.cn_cookie.tmp","w")
     f.write(cookies)
+
     f.close()
 
 browser.quit()

@@ -49,18 +49,40 @@ resp = requests.get(
     headers=headers, timeout=30)
 
 
+def getLastUpdTime():
+    f = open('./tmp/_moocollege.com_.tmp', 'r')
+    name = f.read()
+    f.close()
+    return name
+
+
+def updUpdTime(name):
+    f = open('./tmp/_moocollege.com_.tmp', 'w')
+    f.write(name)
+    f.close()
+    return
+
+
 def main():
     null = None
     false = False
     true = True
+    lastUpdTime = getLastUpdTime()
+    newUpdTime = lastUpdTime
     datalist = eval(resp.text).get("data").get("list")
     cList = []
+    firstCmpt = True
     for data in datalist:
         name = data.get("name")
+        if firstCmpt:
+            if name != newUpdTime:
+                newUpdTime = name
+                updUpdTime(name)
+            firstCmpt = False
         startTime = data.get("startTime")[0:10]
         endTime = data.get("endTime")[0:10]
         url = data.get("url")
-        if url == None :
+        if url == None:
             url = "https://cc.moocollege.com/#/details?" + str(data.get("id"))
         newCompetition = CInfo(url, name, startTime, endTime)
         cList.append(newCompetition)

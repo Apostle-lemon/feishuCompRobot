@@ -9,88 +9,99 @@ target_url = 'http://www.52jingsai.com/bisai/shangyechuangye/chuangye/index.php?
 urlSufix = ['jsstatus=2', 'jsstatus=1', 'jsstatus=6']
 cmptStatus = ['registering', 'before register', 'after register']
 
-pageMax = [2, 1, 2]; # 爬几页
+pageMax = [2, 1, 2];  # 爬几页
 
-class CInfo :
-    def __init__(self, url, status) :
-        self.url = 'http://www.52jingsai.com/' + url.strip()        # info msg url
-        self.status = status.strip()                                # competition status
+
+class CInfo:
+    def __init__(self, url, status):
+        self.url = 'http://www.52jingsai.com/' + url.strip()  # info msg url
+        self.status = status.strip()  # competition status
         self.source = ''
         try:
-            self.source = requests.get(self.url).text                   # get info msg
+            self.source = requests.get(self.url).text  # get info msg
         except requests.exceptions.ConnectTimeout or requests.exceptions.ProxyError:
             print("Cinfo url" + str(url) + "Error")
-        self.bsobj = BeautifulSoup(self.source, features = 'lxml')
+        self.bsobj = BeautifulSoup(self.source, features='lxml')
         self.summary = self.bsobj.find(is_summary)
         self.details = []
-        for msg in self.bsobj.find(is_details) :
-            if( (not isinstance( msg, type('string') )) and msg.has_attr('class') and (msg['class'] == [ 'team' ] or msg['class'] == [ 'qqbg' ]) ) :
+        for msg in self.bsobj.find(is_details):
+            if ((not isinstance(msg, type('string'))) and msg.has_attr('class') and (
+                    msg['class'] == ['team'] or msg['class'] == ['qqbg'])):
                 continue
             self.details.append(msg)
-    def printMe(self) :
+
+    def printMe(self):
         print(self.url, end="\n")
         print(self.summary, end="\n")
-        for line in self.details :
+        for line in self.details:
             print(line, end="\n")
 
-def is_details(tag) : 
+
+def is_details(tag):
     return tag.has_attr('id') and tag['id'] == 'article_content'
 
-def is_summary(tag) :
-    return tag.has_attr('class') and tag['class'] == [ 's', 'zhaiyao' ]
 
-def is_list(tag) :
-    return tag.has_attr('class') and tag['class'] == [ 'xld' ]
+def is_summary(tag):
+    return tag.has_attr('class') and tag['class'] == ['s', 'zhaiyao']
 
-def is_cmpt(tag) :
-    return tag.has_attr('class') and tag['class'] == [ 'bbda', 'list_bbda', 'cl' ]
 
-def getLastUpdTime() :
-    f = open('./tmp/_52jingsai.com_.tmp','r')
+def is_list(tag):
+    return tag.has_attr('class') and tag['class'] == ['xld']
+
+
+def is_cmpt(tag):
+    return tag.has_attr('class') and tag['class'] == ['bbda', 'list_bbda', 'cl']
+
+
+def getLastUpdTime():
+    f = open('./tmp/_52jingsai.com_.tmp', 'r')
     time = f.read()
     f.close()
     return time
 
-def updUpdTime(time) :
-    f = open("./tmp/_52jingsai.com_.tmp",'w')
+
+def updUpdTime(time):
+    f = open("./tmp/_52jingsai.com_.tmp", 'w')
     f.write(time)
     f.close()
     return
 
-def leq(s1,s2) :
-    if len(s1) < len(s2) :
-        return True
-    if len(s1) > len(s2) :
-        return False
-    return s1 < s2 
 
-def main() :
+def leq(s1, s2):
+    if len(s1) < len(s2):
+        return True
+    if len(s1) > len(s2):
+        return False
+    return s1 < s2
+
+
+def main():
     lastUpdTime = getLastUpdTime()
-    newUpdTime = lastUpdTime 
-    for i in range(3) :
-        for page in range(pageMax[i]) :
-            pageInfo = { 'page': str(page+1) }
+    newUpdTime = lastUpdTime
+    for i in range(3):
+        for page in range(pageMax[i]):
+            pageInfo = {'page': str(page + 1)}
             try:
-                resp = requests.get(target_url + urlSufix[i], params = pageInfo)
-            except requests.exceptions.ConnectTimeout or requests.exceptions.ProxyError or requests.exceptions.ConnectionError :
+                resp = requests.get(target_url + urlSufix[i], params=pageInfo)
+            except requests.exceptions.ConnectTimeout or requests.exceptions.ProxyError or requests.exceptions.ConnectionError:
                 print("Error, check the proxy first, then contact the software team")
-            bsobj = BeautifulSoup(resp.text, features = 'lxml')
+            bsobj = BeautifulSoup(resp.text, features='lxml')
             flag = True
-            for cmpt in bsobj.find(is_list).find_all(is_cmpt) :
+            for cmpt in bsobj.find(is_list).find_all(is_cmpt):
                 flag = False
                 link = cmpt.find('a').get('href')
-                if leq(link, lastUpdTime) :
+                if leq(link, lastUpdTime):
                     continue
-                if leq(newUpdTime, link) :
+                if leq(newUpdTime, link):
                     newUpdTime = link
                 newCmpt = CInfo(link, cmptStatus[i])
                 cList.append(newCmpt)
                 newCmpt.printMe()
-            if flag :
+            if flag:
                 break
 
     updUpdTime(newUpdTime)
 
 
-if __name__ == "__main__" :
+if __name__ == "__main__":
     main()
