@@ -22,7 +22,7 @@ cookies = browser.get_cookies()
 if cookies == oldCookies :
     print("[Error] login fail")
 else :
-    f = open("./tmp/_huixx.cn_cookie.tmp","w")
+    f = open("./_huixx.cn_cookie.tmp","w")
     f.write(cookies)
 
     f.close()

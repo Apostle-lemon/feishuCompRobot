@@ -10,10 +10,10 @@
 
 ## 索引
 
-- [x] 【会查查】   ：   `_huixx.cn_.py`
-- [x] 【我爱竞赛网】   ：   `_52jingsai.com_`
-- [x] 【摩课云】   ：   `_moocllege_.py`
-- [x] 【赛氪】   ：   `_saikr.py`
+- [√] 【会查查】   ：   `_huixx.cn_.py`
+- [√] 【我爱竞赛网】   ：   `_52jingsai.com_`
+- [√] 【摩课云】   ：   `_moocllege_.py`
+- [√] 【赛氪】   ：   `_saikr.py`
 
 ## 必要环境
 

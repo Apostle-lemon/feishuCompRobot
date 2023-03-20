@@ -1,0 +1,7 @@
+2023-03-20 23:20:41,069 - internal.pkg.logger - DEBUG - https://www.saikr.com/vs/engineering/0/1?page=1
+2023-03-20 23:20:41,405 - internal.pkg.logger - INFO - get saikr successfully done
+2023-03-20 23:20:41,457 - internal.pkg.logger - DEBUG - https://www.saikr.com/vs/commerce/0/1?page=1
+2023-03-20 23:20:41,713 - internal.pkg.logger - INFO - get saikr successfully done
+2023-03-20 23:20:41,749 - internal.pkg.logger - DEBUG - https://www.saikr.com/vs/colligate/0/1?page=1
+2023-03-20 23:20:42,010 - internal.pkg.logger - INFO - get saikr successfully done
+2023-03-20 23:20:42,063 - internal.pkg.logger - INFO - All Done in current time: 2023-03-20 23:20:42.063839
