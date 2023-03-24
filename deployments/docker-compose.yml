@@ -7,7 +7,7 @@ services:
       - mysql-data:/var/lib/mysql
     environment: 
       MYSQL_ROOT_PASSWORD: 123456
-      MYSQL_DATABASE: xlab_race_db
+      MYSQL_DATABASE: xlab_comp_db
       MYSQL_CHARSET: utf8mb4
       MYSQL_CLIENT_CHARSET: utf8mb4
     expose:
@@ -17,15 +17,28 @@ services:
     networks:
       - my_network
 
-  xlab_race_spider:
+  xlab_comp_spider:
     build:
       context: ..
-      dockerfile: deployments/Dockerfile
+      dockerfile: deployments/spider/Dockerfile
     command: python main.py
     volumes:
       - log:/spider/log
     depends_on:
       - mysql
+    networks:
+      - my_network
+
+  xlab_comp_robot:
+    build:
+      context: ..
+      dockerfile: deployments/robot/Dockerfile
+    command: go run main.go
+    volumes:
+      - log:/robot/log
+    depends_on:
+      - mysql
+      - xlab_comp_spider
     networks:
       - my_network
 
