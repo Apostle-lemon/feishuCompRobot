@@ -5,7 +5,7 @@ logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
 
 # 创建一个文件处理器，将日志写入到文件中
-handler = logging.FileHandler('spider.log')
+handler = logging.FileHandler('./log/spider.log')
 handler.setLevel(logging.DEBUG)
 
 # 终端
