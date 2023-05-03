@@ -1,48 +1,43 @@
 package pkg
 
 import (
-	"database/sql"
 	"fmt"
 	"xlab-feishu-robot/internal/config"
 
-	_ "github.com/go-sql-driver/mysql"
 	"github.com/sirupsen/logrus"
+	"gorm.io/driver/mysql"
+	"gorm.io/gorm"
 )
 
-func Connect() (*sql.DB, error) {
+func Connect() (*gorm.DB, error) {
 	host := config.C.DB.Host
 	port := config.C.DB.Port
 	user := config.C.DB.User
 	password := config.C.DB.Password
 	dbName := config.C.DB.DbName
 
-	// 构造 MySQL 数据库连接字符串
-	dataSourceName := fmt.Sprintf("%s:%s@%s:%s/%s?charset=utf8mb4", user, password, host, port, dbName)
-	logrus.Info("Connecting to database...", host, port, user, password, dbName)
+	dsn := fmt.Sprintf("%s:%s@tcp(%s:%s)/%s?charset=utf8&parseTime=true", user, password, host, port, dbName)
 
-	// 连接 MySQL 数据库
-	db, err := sql.Open("mysql", dataSourceName)
+	// logrus.Info("wait 20 seconds for database to start...")
+	// time.Sleep(20 * time.Second)
+	logrus.Info("Connecting to database...", dsn)
+
+	gromdb, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
 	if err != nil {
 		return nil, err
 	}
 
-	// 测试连接数据库是否成功
-	err = db.Ping()
-	if err != nil {
-		db.Close()
-		return nil, err
-	}
+	logrus.Info("Database connected")
 
-	return db, nil
+	return gromdb, nil
 }
 
-var DB *sql.DB
+var DB *gorm.DB
 
-func init() {
+func InitDB() {
 	var err error
 	DB, err = Connect()
 	if err != nil {
 		panic(err)
 	}
-	defer DB.Close()
 }

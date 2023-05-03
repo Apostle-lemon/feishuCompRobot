@@ -2,7 +2,7 @@ import requests
 from .comp_list import compList
 from bs4 import BeautifulSoup
 from .pkg.logger import logger
-from model.model import comp
+from model.model import Comp
 
 compType = ['shangyechuangye','keji','xkjn']
 pageMax = [2, 2, 2]  # 对于 商业创业，科技，学科竞赛 分别爬几页
@@ -33,7 +33,7 @@ def main():
                 name = comp.find('dt', class_='xs2_tit').a.text.strip()
                 link = comp.find('a').get('href')
                 url = 'http://www.52jingsai.com/' + link.strip()
-                newcomp = comp(name,url)
+                newcomp = Comp(name,url)
                 compList.append(newcomp)
 
 

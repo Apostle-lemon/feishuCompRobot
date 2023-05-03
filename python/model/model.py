@@ -1,11 +1,11 @@
-from sqlalchemy import Column, DateTime, Index, String, TIMESTAMP, text
+from sqlalchemy import Column, DateTime, Index, String, TIMESTAMP, text, Integer
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import PrimaryKeyConstraint
 import sqlalchemy.orm
 
 Base = sqlalchemy.orm.declarative_base()
 
-class comp(Base):
+class Comp(Base):
     __tablename__ = 'comp'
     name = Column(String(100))
     url = Column(String(200), nullable=False, unique=True)
@@ -14,6 +14,7 @@ class comp(Base):
     location = Column(String(100))
     organizer = Column(String(100))
     create_time = Column(TIMESTAMP, nullable=False, server_default=text('CURRENT_TIMESTAMP'))
+    checked = Column(Integer, nullable=False, default=0)
     __table_args__ = (
         PrimaryKeyConstraint('url', name='url'),
         Index('idx_comp_create_time', 'create_time'),
@@ -27,6 +28,7 @@ class comp(Base):
         self.end_time = end_time
         self.location = location
         self.organizer = organizer
+        self.checked = 0
 
     def __str__(self):
         return str(self.name + " " + self.url + "\n")

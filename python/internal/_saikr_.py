@@ -1,4 +1,4 @@
-from model.model import comp
+from model.model import Comp
 from .pkg.logger import logger
 import requests
 from bs4 import BeautifulSoup
@@ -28,7 +28,7 @@ def main():
                 if i.has_attr("class") and i.attrs['class'] == ["item", "clearfix"]:
                     name = i.find(class_="link").string
                     url = i.find_all("a")[-1:][0].attrs["href"]
-                    newcomp = comp(name, url)
+                    newcomp = Comp(name, url)
                     compList.append(newcomp)
 
 if __name__ == '__main__':

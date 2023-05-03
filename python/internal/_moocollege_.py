@@ -1,4 +1,4 @@
-from model.model import comp
+from model.model import Comp
 from .pkg.logger import logger
 import requests
 from bs4 import BeautifulSoup
@@ -20,15 +20,16 @@ def main():
     logger.info('get moocollege successfully done')
     datalist = eval(resp.text).get("data").get("list")
     for data in datalist:
-        name = data.get("name")
-        # startTime = data.get("startTime")[0:10]
-        # endTime = data.get("endTime")[0:10]
-        url = data.get("url")
-        if url == None:
-            url = "https://cc.moocollege.com/#/details?" + str(data.get("id"))
-        newCompetition = comp(name,url)
-        compList.append(newCompetition)
-        # newCompetition.printMe()
+        try:
+            name = data.get("name")
+            url = data.get("url")
+            if url == None:
+                url = "https://cc.moocollege.com/#/details?" + str(data.get("id"))
+            newCompetition = Comp(name,url)
+            compList.append(newCompetition)
+        except:
+            logger.error("data structure error, maybe the website has changed the structure")
+            continue
 
 
 if __name__ == '__main__':

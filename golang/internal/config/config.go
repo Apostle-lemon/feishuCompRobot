@@ -23,7 +23,7 @@ type Config struct {
 var C Config
 
 func ReadConfig() {
-	viper.SetConfigName("lemonconfig")
+	viper.SetConfigName("localhost")
 	viper.AddConfigPath("./config/")
 
 	if err := viper.ReadInConfig(); err != nil {

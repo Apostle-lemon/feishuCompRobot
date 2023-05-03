@@ -10,6 +10,9 @@ schedule.every().wednesday.at("11:30").do(Job)
 # 每周六的 11:30 执行一次 job
 schedule.every().saturday.at("11:30").do(Job)
 
+# 每1分钟执行一次 job
+schedule.every(1).minutes.do(Job)
+
 while True:
     schedule.run_pending()
     time.sleep(30)

@@ -1,2 +1,146 @@
 2023-03-21 21:47:08,467 - internal.pkg.logger - INFO - mysql+mysqlconnector://root:123456@mysql:3306/xlab_comp_db?charset=utf8
 2023-03-21 21:47:20,794 - internal.pkg.logger - INFO - mysql+mysqlconnector://root:123456@mysql:3306/xlab_comp_db?charset=utf8
+2023-05-03 20:43:31,982 - internal.pkg.logger - INFO - mysql+mysqlconnector://vscode:dcp2001pb@localhost:3306/xlab_comp_db?charset=utf8
+2023-05-03 20:44:56,539 - internal.pkg.logger - INFO - mysql+mysqlconnector://vscode:dcp2001pb@localhost:3306/xlab_comp_db?charset=utf8
+2023-05-03 21:03:14,437 - internal.pkg.logger - INFO - mysql+mysqlconnector://vscode:dcp2001pb@localhost:3306/xlab_comp_db?charset=utf8
+2023-05-03 21:03:14,670 - internal.pkg.logger - INFO - db connect success
+2023-05-03 21:07:06,709 - internal.pkg.logger - INFO - mysql+mysqlconnector://vscode:dcp2001pb@localhost:3306/xlab_comp_db?charset=utf8
+2023-05-03 21:07:06,748 - internal.pkg.logger - INFO - db connect success
+2023-05-03 21:08:02,536 - internal.pkg.logger - INFO - mysql+mysqlconnector://vscode:dcp2001pb@localhost:3306/xlab_comp_db?charset=utf8
+2023-05-03 21:08:02,572 - internal.pkg.logger - INFO - db connect success
+2023-05-03 21:13:02,853 - internal.pkg.logger - INFO - Start enumming moocollege
+2023-05-03 21:13:13,413 - internal.pkg.logger - INFO - get moocollege successfully done
+2023-05-03 21:13:13,487 - internal.pkg.logger - INFO - https://www.saikr.com/vs/engineering/0/1?page=1
+2023-05-03 21:13:14,008 - internal.pkg.logger - INFO - get saikr successfully done
+2023-05-03 21:14:04,733 - internal.pkg.logger - INFO - mysql+mysqlconnector://vscode:dcp2001pb@localhost:3306/xlab_comp_db?charset=utf8
+2023-05-03 21:14:04,770 - internal.pkg.logger - INFO - db connect success
+2023-05-03 21:16:04,877 - internal.pkg.logger - INFO - Start enumming moocollege
+2023-05-03 21:16:15,226 - internal.pkg.logger - INFO - get moocollege successfully done
+2023-05-03 21:16:15,302 - internal.pkg.logger - INFO - https://www.saikr.com/vs/engineering/0/1?page=1
+2023-05-03 21:16:15,762 - internal.pkg.logger - INFO - get saikr successfully done
+2023-05-03 21:16:15,790 - internal.pkg.logger - INFO - https://www.saikr.com/vs/colligate/0/1?page=1
+2023-05-03 21:16:16,134 - internal.pkg.logger - INFO - get saikr successfully done
+2023-05-03 21:16:16,166 - internal.pkg.logger - INFO - https://www.saikr.com/vs/commerce/0/1?page=1
+2023-05-03 21:16:16,568 - internal.pkg.logger - INFO - get saikr successfully done
+2023-05-03 21:16:16,596 - internal.pkg.logger - INFO - http://www.52jingsai.com/bisai/shangyechuangyeindex.php?{'page': '1'}
+2023-05-03 21:16:17,154 - internal.pkg.logger - INFO - get 52jingsai successfully done
+2023-05-03 21:16:17,213 - internal.pkg.logger - INFO - http://www.52jingsai.com/bisai/shangyechuangyeindex.php?{'page': '2'}
+2023-05-03 21:16:17,555 - internal.pkg.logger - INFO - get 52jingsai successfully done
+2023-05-03 21:16:17,581 - internal.pkg.logger - INFO - http://www.52jingsai.com/bisai/kejiindex.php?{'page': '1'}
+2023-05-03 21:16:18,077 - internal.pkg.logger - INFO - get 52jingsai successfully done
+2023-05-03 21:16:18,104 - internal.pkg.logger - INFO - http://www.52jingsai.com/bisai/kejiindex.php?{'page': '2'}
+2023-05-03 21:16:18,422 - internal.pkg.logger - INFO - get 52jingsai successfully done
+2023-05-03 21:16:18,448 - internal.pkg.logger - INFO - http://www.52jingsai.com/bisai/xkjnindex.php?{'page': '1'}
+2023-05-03 21:16:18,777 - internal.pkg.logger - INFO - get 52jingsai successfully done
+2023-05-03 21:16:18,837 - internal.pkg.logger - INFO - http://www.52jingsai.com/bisai/xkjnindex.php?{'page': '2'}
+2023-05-03 21:16:19,137 - internal.pkg.logger - INFO - get 52jingsai successfully done
+2023-05-03 21:24:46,588 - internal.pkg.logger - INFO - mysql+mysqlconnector://vscode:dcp2001pb@localhost:3306/xlab_comp_db?charset=utf8
+2023-05-03 21:24:46,624 - internal.pkg.logger - INFO - db connect success
+2023-05-03 21:26:46,742 - internal.pkg.logger - INFO - Start enumming moocollege
+2023-05-03 21:26:57,163 - internal.pkg.logger - INFO - get moocollege successfully done
+2023-05-03 21:26:57,239 - internal.pkg.logger - INFO - https://www.saikr.com/vs/colligate/0/1?page=1
+2023-05-03 21:26:57,728 - internal.pkg.logger - INFO - get saikr successfully done
+2023-05-03 21:26:57,758 - internal.pkg.logger - INFO - https://www.saikr.com/vs/engineering/0/1?page=1
+2023-05-03 21:26:58,135 - internal.pkg.logger - INFO - get saikr successfully done
+2023-05-03 21:26:58,166 - internal.pkg.logger - INFO - https://www.saikr.com/vs/commerce/0/1?page=1
+2023-05-03 21:26:58,509 - internal.pkg.logger - INFO - get saikr successfully done
+2023-05-03 21:26:58,539 - internal.pkg.logger - INFO - http://www.52jingsai.com/bisai/shangyechuangyeindex.php?{'page': '1'}
+2023-05-03 21:26:59,100 - internal.pkg.logger - INFO - get 52jingsai successfully done
+2023-05-03 21:26:59,128 - internal.pkg.logger - INFO - http://www.52jingsai.com/bisai/shangyechuangyeindex.php?{'page': '2'}
+2023-05-03 21:26:59,559 - internal.pkg.logger - INFO - get 52jingsai successfully done
+2023-05-03 21:26:59,585 - internal.pkg.logger - INFO - http://www.52jingsai.com/bisai/kejiindex.php?{'page': '1'}
+2023-05-03 21:26:59,985 - internal.pkg.logger - INFO - get 52jingsai successfully done
+2023-05-03 21:27:00,011 - internal.pkg.logger - INFO - http://www.52jingsai.com/bisai/kejiindex.php?{'page': '2'}
+2023-05-03 21:27:00,407 - internal.pkg.logger - INFO - get 52jingsai successfully done
+2023-05-03 21:27:00,434 - internal.pkg.logger - INFO - http://www.52jingsai.com/bisai/xkjnindex.php?{'page': '1'}
+2023-05-03 21:27:00,784 - internal.pkg.logger - INFO - get 52jingsai successfully done
+2023-05-03 21:27:00,846 - internal.pkg.logger - INFO - http://www.52jingsai.com/bisai/xkjnindex.php?{'page': '2'}
+2023-05-03 21:27:01,137 - internal.pkg.logger - INFO - get 52jingsai successfully done
+2023-05-03 21:29:33,081 - internal.pkg.logger - INFO - mysql+mysqlconnector://vscode:dcp2001pb@localhost:3306/xlab_comp_db?charset=utf8
+2023-05-03 21:29:33,118 - internal.pkg.logger - INFO - db connect success
+2023-05-03 21:31:33,219 - internal.pkg.logger - INFO - Start enumming moocollege
+2023-05-03 21:31:43,676 - internal.pkg.logger - INFO - get moocollege successfully done
+2023-05-03 21:31:43,750 - internal.pkg.logger - INFO - https://www.saikr.com/vs/commerce/0/1?page=1
+2023-05-03 21:31:44,170 - internal.pkg.logger - INFO - get saikr successfully done
+2023-05-03 21:31:44,198 - internal.pkg.logger - INFO - https://www.saikr.com/vs/colligate/0/1?page=1
+2023-05-03 21:31:44,681 - internal.pkg.logger - INFO - get saikr successfully done
+2023-05-03 21:31:44,719 - internal.pkg.logger - INFO - https://www.saikr.com/vs/engineering/0/1?page=1
+2023-05-03 21:31:45,065 - internal.pkg.logger - INFO - get saikr successfully done
+2023-05-03 21:31:45,095 - internal.pkg.logger - INFO - http://www.52jingsai.com/bisai/shangyechuangyeindex.php?{'page': '1'}
+2023-05-03 21:31:45,389 - internal.pkg.logger - INFO - get 52jingsai successfully done
+2023-05-03 21:31:45,415 - internal.pkg.logger - INFO - http://www.52jingsai.com/bisai/shangyechuangyeindex.php?{'page': '2'}
+2023-05-03 21:31:45,743 - internal.pkg.logger - INFO - get 52jingsai successfully done
+2023-05-03 21:31:45,770 - internal.pkg.logger - INFO - http://www.52jingsai.com/bisai/kejiindex.php?{'page': '1'}
+2023-05-03 21:31:46,148 - internal.pkg.logger - INFO - get 52jingsai successfully done
+2023-05-03 21:31:46,177 - internal.pkg.logger - INFO - http://www.52jingsai.com/bisai/kejiindex.php?{'page': '2'}
+2023-05-03 21:31:46,547 - internal.pkg.logger - INFO - get 52jingsai successfully done
+2023-05-03 21:31:46,573 - internal.pkg.logger - INFO - http://www.52jingsai.com/bisai/xkjnindex.php?{'page': '1'}
+2023-05-03 21:31:46,848 - internal.pkg.logger - INFO - get 52jingsai successfully done
+2023-05-03 21:31:46,911 - internal.pkg.logger - INFO - http://www.52jingsai.com/bisai/xkjnindex.php?{'page': '2'}
+2023-05-03 21:31:47,249 - internal.pkg.logger - INFO - get 52jingsai successfully done
+2023-05-03 21:37:32,705 - internal.pkg.logger - INFO - mysql+mysqlconnector://vscode:dcp2001pb@localhost:3306/xlab_comp_db?charset=utf8
+2023-05-03 21:37:32,742 - internal.pkg.logger - INFO - db connect success
+2023-05-03 21:38:32,801 - internal.pkg.logger - INFO - Start enumming moocollege
+2023-05-03 21:38:43,567 - internal.pkg.logger - INFO - get moocollege successfully done
+2023-05-03 21:38:43,643 - internal.pkg.logger - INFO - https://www.saikr.com/vs/commerce/0/1?page=1
+2023-05-03 21:38:44,119 - internal.pkg.logger - INFO - get saikr successfully done
+2023-05-03 21:38:44,149 - internal.pkg.logger - INFO - https://www.saikr.com/vs/engineering/0/1?page=1
+2023-05-03 21:38:44,554 - internal.pkg.logger - INFO - get saikr successfully done
+2023-05-03 21:38:44,582 - internal.pkg.logger - INFO - https://www.saikr.com/vs/colligate/0/1?page=1
+2023-05-03 21:38:45,083 - internal.pkg.logger - INFO - get saikr successfully done
+2023-05-03 21:38:45,114 - internal.pkg.logger - INFO - http://www.52jingsai.com/bisai/shangyechuangyeindex.php?{'page': '1'}
+2023-05-03 21:38:45,641 - internal.pkg.logger - INFO - get 52jingsai successfully done
+2023-05-03 21:38:45,667 - internal.pkg.logger - INFO - http://www.52jingsai.com/bisai/shangyechuangyeindex.php?{'page': '2'}
+2023-05-03 21:38:46,135 - internal.pkg.logger - INFO - get 52jingsai successfully done
+2023-05-03 21:38:46,162 - internal.pkg.logger - INFO - http://www.52jingsai.com/bisai/kejiindex.php?{'page': '1'}
+2023-05-03 21:38:46,553 - internal.pkg.logger - INFO - get 52jingsai successfully done
+2023-05-03 21:38:46,579 - internal.pkg.logger - INFO - http://www.52jingsai.com/bisai/kejiindex.php?{'page': '2'}
+2023-05-03 21:38:46,997 - internal.pkg.logger - INFO - get 52jingsai successfully done
+2023-05-03 21:38:47,028 - internal.pkg.logger - INFO - http://www.52jingsai.com/bisai/xkjnindex.php?{'page': '1'}
+2023-05-03 21:38:47,330 - internal.pkg.logger - INFO - get 52jingsai successfully done
+2023-05-03 21:38:47,392 - internal.pkg.logger - INFO - http://www.52jingsai.com/bisai/xkjnindex.php?{'page': '2'}
+2023-05-03 21:38:47,637 - internal.pkg.logger - INFO - get 52jingsai successfully done
+2023-05-03 21:38:47,785 - internal.pkg.logger - DEBUG - find the same url:www.robotcontest.cn
+2023-05-03 21:38:47,793 - internal.pkg.logger - DEBUG - find the same url:www.jcyxds.com
+2023-05-03 21:38:47,872 - internal.pkg.logger - DEBUG - find the same url:znjqr.sc.moocollege.com
+2023-05-03 21:38:47,882 - internal.pkg.logger - DEBUG - find the same url:sizu.moocollege.com
+2023-05-03 21:38:47,925 - internal.pkg.logger - DEBUG - find the same url:znjqr.sx.moocollege.com
+2023-05-03 21:38:47,927 - internal.pkg.logger - DEBUG - find the same url:znjqr.jl.moocollege.com
+2023-05-03 21:38:47,931 - internal.pkg.logger - DEBUG - find the same url:www.structurecontest.com
+2023-05-03 21:38:47,942 - internal.pkg.logger - DEBUG - find the same url:znjqr.hlj.moocollege.com
+2023-05-03 21:38:47,943 - internal.pkg.logger - DEBUG - find the same url:smartcar.moocollege.com
+2023-05-03 21:38:47,947 - internal.pkg.logger - DEBUG - find the same url:znjqr.cq.moocollege.com
+2023-05-03 21:38:47,954 - internal.pkg.logger - DEBUG - find the same url:dzjnds.p.moocollege.com
+2023-05-03 21:38:47,955 - internal.pkg.logger - DEBUG - find the same url:elsfk.moocollege.com
+2023-05-03 21:38:47,957 - internal.pkg.logger - DEBUG - find the same url:znjqr.sh.moocollege.com
+2023-05-03 21:38:47,965 - internal.pkg.logger - DEBUG - find the same url:znjqr.tj.moocollege.com
+2023-05-03 21:38:47,966 - internal.pkg.logger - DEBUG - find the same url:znjqr.ah.moocollege.com
+2023-05-03 21:38:47,967 - internal.pkg.logger - DEBUG - find the same url:znjqr.nmg.moocollege.com
+2023-05-03 21:38:48,001 - internal.pkg.logger - DEBUG - find the same url:znjqr.hb.moocollege.com
+2023-05-03 21:38:48,008 - internal.pkg.logger - DEBUG - find the same url:znjqr.gxzzzzq.moocollege.com
+2023-05-03 21:38:48,021 - internal.pkg.logger - DEBUG - find the same url:znjqr.xj.moocollege.com
+2023-05-03 21:38:48,022 - internal.pkg.logger - DEBUG - find the same url:znjqr.hunan.moocollege.com
+2023-05-03 21:38:48,023 - internal.pkg.logger - DEBUG - find the same url:dzjnds.p.moocollege.com
+2023-05-03 21:38:48,025 - internal.pkg.logger - DEBUG - find the same url:znjqr.jx.moocollege.com
+2023-05-03 21:38:48,042 - internal.pkg.logger - DEBUG - find the same url:znjqr.yn.moocollege.com
+2023-05-03 21:38:48,043 - internal.pkg.logger - DEBUG - find the same url:znjqr.qh.moocollege.com
+2023-05-03 21:38:48,045 - internal.pkg.logger - DEBUG - find the same url:znjqr.gz.moocollege.com
+2023-05-03 21:38:48,058 - internal.pkg.logger - DEBUG - find the same url:znjqr.hn.moocollege.com
+2023-05-03 21:38:48,060 - internal.pkg.logger - DEBUG - find the same url:znjqr.gd.moocollege.com
+2023-05-03 21:38:48,061 - internal.pkg.logger - DEBUG - find the same url:znjqr.xz.moocollege.com
+2023-05-03 21:38:48,127 - internal.pkg.logger - DEBUG - find the same url:znjqr.nx.moocollege.com
+2023-05-03 21:38:48,273 - internal.pkg.logger - DEBUG - find the same url:www.structurecontest.com
+2023-05-03 21:38:48,274 - internal.pkg.logger - DEBUG - find the same url:www.structurecontest.com
+2023-05-03 21:38:48,275 - internal.pkg.logger - DEBUG - find the same url:www.structurecontest.com
+2023-05-03 21:38:48,276 - internal.pkg.logger - DEBUG - find the same url:www.structurecontest.com
+2023-05-03 21:38:48,278 - internal.pkg.logger - DEBUG - find the same url:www.structurecontest.com
+2023-05-03 21:38:48,279 - internal.pkg.logger - DEBUG - find the same url:www.structurecontest.com
+2023-05-03 21:38:48,280 - internal.pkg.logger - DEBUG - find the same url:www.structurecontest.com
+2023-05-03 21:38:48,281 - internal.pkg.logger - DEBUG - find the same url:www.structurecontest.com
+2023-05-03 21:38:48,283 - internal.pkg.logger - DEBUG - find the same url:www.structurecontest.com
+2023-05-03 21:38:48,284 - internal.pkg.logger - DEBUG - find the same url:www.structurecontest.com
+2023-05-03 21:38:48,285 - internal.pkg.logger - DEBUG - find the same url:www.structurecontest.com
+2023-05-03 21:38:48,286 - internal.pkg.logger - DEBUG - find the same url:www.structurecontest.com
+2023-05-03 21:38:48,287 - internal.pkg.logger - DEBUG - find the same url:www.c4best.cn
+2023-05-03 21:38:48,289 - internal.pkg.logger - DEBUG - find the same url:www.c4best.cn
+2023-05-03 21:38:48,617 - internal.pkg.logger - INFO - All Done in current time: 2023-05-03 21:38:48.617566

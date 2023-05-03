@@ -10,6 +10,7 @@ CREATE TABLE IF NOT EXISTS `comp` (
     `location` VARCHAR(100),
     `organizer` VARCHAR(100),
     `create_time` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    `checked` INT NOT NULL DEFAULT 0,
     PRIMARY KEY (`url`),
     INDEX `comp_create_time` (`create_time`)
 ) DEFAULT CHARSET=utf8mb4;
