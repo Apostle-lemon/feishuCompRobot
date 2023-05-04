@@ -1,7 +1,9 @@
 version: '3.9'
 services:
   mysql:
-    image: mysql:latest
+    build:
+      context: ..
+      dockerfile: deployments/mysql/Dockerfile
     container_name: mysql
     volumes:
       - mysql-data:/var/lib/mysql

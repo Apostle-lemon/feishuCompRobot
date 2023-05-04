@@ -16,6 +16,6 @@ FROM alpine:latest
 
 WORKDIR /root/
 COPY --from=builder /robot/robot .
-COPY --from=builder /robot/config/config.yaml .
+COPY --from=builder /robot/config/config.yaml ./config/
 
 ENTRYPOINT ["./robot"]

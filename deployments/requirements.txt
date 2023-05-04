@@ -2,6 +2,6 @@ beautifulsoup4==4.12.0
 PyYAML==6.0
 requests
 schedule==1.1.0
-SQLAlchemy==2.0.7
-mysql-connector-python
+SQLAlchemy==2.0.12
+mysql-connector-python==8.0.33
 lxml
