@@ -2,6 +2,7 @@ package pkg
 
 import (
 	"fmt"
+	"time"
 	"xlab-feishu-robot/internal/config"
 
 	"github.com/sirupsen/logrus"
@@ -18,8 +19,8 @@ func Connect() (*gorm.DB, error) {
 
 	dsn := fmt.Sprintf("%s:%s@tcp(%s:%s)/%s?charset=utf8&parseTime=true", user, password, host, port, dbName)
 
-	// logrus.Info("wait 20 seconds for database to start...")
-	// time.Sleep(20 * time.Second)
+	logrus.Info("wait 120 seconds for database to start...")
+	time.Sleep(120 * time.Second)
 	logrus.Info("Connecting to database...", dsn)
 
 	gromdb, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})

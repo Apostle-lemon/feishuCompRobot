@@ -7,6 +7,7 @@ import datetime
 
 def main():
     getAllcomp()
+    logger.info("get all comp success, start to store")
     for compItem in compList:
         add_comp(compItem)
     logger.info("All Done in current time: " + str(datetime.datetime.now()))

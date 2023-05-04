@@ -35,3 +35,7 @@ go.work
 .idea
 lemonconfig*
 localhost.yaml
+config.yaml
+/__pycache__/
+__pycache__/
+__pycache__/*

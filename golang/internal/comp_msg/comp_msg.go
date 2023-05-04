@@ -5,6 +5,7 @@ import (
 	"xlab-feishu-robot/internal/model"
 	"xlab-feishu-robot/internal/pkg"
 
+	"github.com/robfig/cron/v3"
 	"github.com/sirupsen/logrus"
 )
 
@@ -12,17 +13,17 @@ var AppToken string = "ZEzobwp5VagznYs66zqcDe6Nnac"
 var TableId string = "tbls2xvl2e4HWo27"
 
 func Init() {
-	// logrus.Info("init compmsg timer")
-	// c := cron.New(cron.WithSeconds())
-	// // 每天 6 点执行
-	// _, err := c.AddFunc("0 0 6 * * *", checkDBUpdate)
-	// if err != nil {
-	// 	panic(err)
-	// }
-	// logrus.Info("start compmsg cron timer")
-	// c.Start()
+	logrus.Info("init compmsg timer")
+	c := cron.New(cron.WithSeconds())
+	// 每天 6 点执行
+	_, err := c.AddFunc("0 0 6 * * *", checkDBUpdate)
+	if err != nil {
+		panic(err)
+	}
+	logrus.Info("start compmsg cron timer")
+	c.Start()
 
-	logrus.Info("compmsg DEBUG")
+	logrus.Info("First start, run checkDBUpdate")
 	debug()
 
 }
@@ -48,6 +49,8 @@ func handleCompDBItem(comp model.CompModel) {
 		return
 	} else {
 		comp.Checked = 1
+		// 100 ms, because of the rate limit of feishu api
+		time.Sleep(100 * time.Millisecond)
 		writeFeishuFile(comp)
 		pkg.DB.Save(comp)
 	}
